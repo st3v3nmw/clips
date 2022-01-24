@@ -1,6 +1,6 @@
-(deftemplate disease
-    (slot ID (type INTEGER))
-    (slot name (type STRING))
+(defclass DISEASE
+    (is-a USER)
+    (slot disease_name (type STRING))
     (multislot causes)
     (multislot symptoms)
     (multislot treatments)

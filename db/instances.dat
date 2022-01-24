@@ -1,26 +1,28 @@
 ([initial-object] of INITIAL-OBJECT)
 
-([gen1] of CAUSE
-   (description Sasdfasdf))
+([Cholera] of DISEASE
+   (disease_name Cholera)
+   (causes [Water])
+   (symptoms [Vomit])
+   (treatments [Meds])
+   (prevention [Clean]))
 
-([gen2] of SYMPTOM
-   (description asdfasdf))
+([Malaria] of DISEASE
+   (disease_name Malaria)
+   (causes [Water])
+   (symptoms [Vomit])
+   (treatments [Meds])
+   (prevention [Clean]))
 
-([gen3] of TREATMENT
-   (description asdfasdf))
+([Water] of CAUSE
+   (description Water))
 
-([gen4] of PREVENTION
-   (description asdfasdf))
+([Vomit] of SYMPTOM
+   (description Vomit))
 
-([gen5] of CAUSE
-   (description asf))
+([Meds] of TREATMENT
+   (description Meds))
 
-([gen6] of SYMPTOM
-   (description asdf))
-
-([gen7] of TREATMENT
-   (description asfasf))
-
-([gen8] of PREVENTION
-   (description asf))
+([Clean] of PREVENTION
+   (description Clean))
 
