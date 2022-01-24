@@ -1,0 +1,26 @@
+([initial-object] of INITIAL-OBJECT)
+
+([gen1] of CAUSE
+   (description Sasdfasdf))
+
+([gen2] of SYMPTOM
+   (description asdfasdf))
+
+([gen3] of TREATMENT
+   (description asdfasdf))
+
+([gen4] of PREVENTION
+   (description asdfasdf))
+
+([gen5] of CAUSE
+   (description asf))
+
+([gen6] of SYMPTOM
+   (description asdf))
+
+([gen7] of TREATMENT
+   (description asfasf))
+
+([gen8] of PREVENTION
+   (description asf))
+
