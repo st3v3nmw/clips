@@ -24,5 +24,11 @@
 
 (defclass PREVENTION
     (is-a USER)
+    (slot prevention (type STRING))
+)
+
+(deftemplate symptom
+    (slot ID (type INTEGER))
+    (slot name (type STRING))
     (slot description (type STRING))
 )
