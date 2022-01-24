@@ -1,0 +1,2 @@
+(initial-fact)
+(disease (name Typhoid) (causes [gen5]) (symptoms [gen6]) (treatments [gen7]) (prevention [gen8]))
