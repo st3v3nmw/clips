@@ -1,28 +1,57 @@
-([initial-object] of INITIAL-OBJECT)
-
-([Cholera] of DISEASE
-   (disease_name Cholera)
-   (causes [Water])
-   (symptoms [Vomit])
-   (treatments [Meds])
-   (prevention [Clean]))
-
 ([Malaria] of DISEASE
    (disease_name Malaria)
-   (causes [Water])
-   (symptoms [Vomit])
-   (treatments [Meds])
-   (prevention [Clean]))
+   (causes [Bacteria])
+   (symptoms [Headaches])
+   (treatments [Sleeping])
+   (prevention [Neting]))
 
-([Water] of CAUSE
-   (description Water))
+([Bacteria] of CAUSE
+   (description Bacteria))
 
-([Vomit] of SYMPTOM
-   (description Vomit))
+([Headaches] of SYMPTOM
+   (description Headaches))
 
-([Meds] of TREATMENT
-   (description Meds))
+([Sleeping] of TREATMENT
+   (description Sleeping))
 
-([Clean] of PREVENTION
-   (description Clean))
+([Neting] of PREVENTION
+   (description Neting))
+
+([Cold] of DISEASE
+   (disease_name Cold)
+   (causes [flue])
+   (symptoms [sour])
+   (treatments [salty])
+   (prevention [masks]))
+
+([flue] of CAUSE
+   (description flue))
+
+([sour] of SYMPTOM
+   (description sour))
+
+([salty] of TREATMENT
+   (description salty))
+
+([masks] of PREVENTION
+   (description masks))
+
+([asdd] of DISEASE
+   (disease_name asdd)
+   (causes [fdxfedfe])
+   (symptoms [dfggsf])
+   (treatments [sftre])
+   (prevention [sdfd]))
+
+([fdxfedfe] of CAUSE
+   (description fdxfedfe))
+
+([dfggsf] of SYMPTOM
+   (description dfggsf))
+
+([sftre] of TREATMENT
+   (description sftre))
+
+([sdfd] of PREVENTION
+   (description sdfd))
 
