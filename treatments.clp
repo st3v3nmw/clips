@@ -6,7 +6,7 @@
     )
     (treatment
         (ID 2)
-        (name "ADecongestants")
+        (name "Decongestants")
     )
     (treatment
         (ID 3)
