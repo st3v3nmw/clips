@@ -4,7 +4,7 @@
     (multislot causes)
     (multislot symptoms)
     (multislot treatments)
-    (multislot prevention)
+    (multislot preventions)
 )
 
 (defclass CAUSE
