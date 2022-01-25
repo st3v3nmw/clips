@@ -19,9 +19,9 @@
 )
 
 (deffunction expert ()
-    (load-instances "db/instances.dat")
+    (load-instances "instances.dat")
 
-    (printout t "Welcome to the expert system shell!" crlf)
+    (printout t "KNOWLEDGE BASE ENTRY UI" crlf)
     (printout t "How many diseases are in the dataset? ")
     (bind ?loop_count (read-number))
 
@@ -43,7 +43,7 @@
             (treatments ?treatments)
             (preventions ?preventions))
         
-        (save-instances "db/instances.dat")
+        (save-instances "instances.dat")
     )
 )
 

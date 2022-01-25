@@ -1,8 +1,5 @@
-# Diagnosis
+# Diagnosis System
 
-- Dataset: Load from some file to facts/classes
-- Common diseases, 
-- Symptoms => Rules
-- Causes => Explanation
-- Inference method => Rule-based backward chaining
-- 
+## Diagnosing a Patient
+
+## Updating the Knowledge Base
