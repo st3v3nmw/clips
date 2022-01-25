@@ -26,9 +26,3 @@
     (is-a USER)
     (slot description (type STRING))
 )
-
-(deftemplate symptom
-    (slot ID (type INTEGER))
-    (slot name (type STRING))
-    (slot description (type STRING))
-)
