@@ -42,9 +42,9 @@
             (symptoms ?symptoms)
             (treatments ?treatments)
             (preventions ?preventions))
+        
+        (save-instances "db/instances.dat")
     )
-    
-    (save-instances "db/instances.dat")
 )
 
 (expert)
