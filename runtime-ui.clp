@@ -1,3 +1,11 @@
+(load "constructs.clp")
+
+(load-instances "instances.dat")
+
+(deffunction print-disease-information ?disease_name
+
+)
+
 (defrule Menu
  (not (iffoundChoice ?))
 =>
