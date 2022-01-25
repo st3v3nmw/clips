@@ -1,11 +1,5 @@
 (load "constructs.clp")
 
-(load-instances "instances.dat")
-
-(deffunction print-disease-information ?disease_name
-
-)
-
 (defrule Menu
  (not (iffoundChoice ?))
 =>
@@ -27,6 +21,24 @@ below" crlf crlf
 (retract ?retractCh1)
 (printout t crlf crlf crlf "Do you feel a headache? (yes | no) " crlf crlf " Your answer: " )
  (assert (ifYesNochoice (read))))
+
+(defrule Eye_r0
+(iffoundChoice 2)
+?retractCh1 <- (iffoundChoice 2)
+(not (ifYesNochoicex ?))
+=>
+(retract ?retractCh1)
+(printout t crlf crlf crlf "Do you have irritating or watery eyes (yes | no) " crlf crlf " Your answer: " )
+ (assert (ifYesNochoicex (read))))
+
+(defrule Stomach_r0
+(iffoundChoice 3)
+?retractCh1 <- (iffoundChoice 3)
+(not (ifYesNochoices ?))
+=>
+(retract ?retractCh1)
+(printout t crlf crlf crlf "Do you have loose stool (yes | no) " crlf crlf " Your answer: " )
+ (assert (ifYesNochoices (read))))
 
 (defrule Headache_r1
 (ifYesNochoice yes)
@@ -78,7 +90,7 @@ below" crlf crlf
 ?retractChy <- (ifYesNochoice5 yes)
 =>
 (retract ?retractChy)
-(printout t crlf crlf crlf "Your are sufferring from Malaria" crlf crlf))
+(printout t crlf crlf crlf "You are suffering from Malaria" crlf crlf))
 
 ;; Cold and flu
 (defrule Headache_r7
@@ -125,7 +137,7 @@ below" crlf crlf
 ?retractChy <- (ifYesNochoice9 yes)
 =>
 (retract ?retractChy)
-(printout t crlf crlf crlf "Your are sufferring from Cold and Flu" crlf crlf))
+(printout t crlf crlf crlf "You are suffering from Cold and Flu" crlf crlf))
 
 ;; Allergies
 (defrule NoHeadache_r1
@@ -151,16 +163,9 @@ below" crlf crlf
 ?retractChy <- (ifYesNochoice13 yes)
 =>
 (retract ?retractChy)
-(printout t crlf crlf crlf "Your an Allergic reaction" crlf crlf))
+(printout t crlf crlf crlf "You have an Allergic reaction" crlf crlf))
 
-(defrule Eye_r0
-(iffoundChoice 2)
-?retractCh1 <- (iffoundChoice 2)
-(not (ifYesNochoicex ?))
-=>
-(retract ?retractCh1)
-(printout t crlf crlf crlf "Do you have irritating or watery eyes (yes | no) " crlf crlf " Your answer: " )
- (assert (ifYesNochoicex (read))))
+;;;;-Eye
 
  (defrule Eye_r1
 (ifYesNochoicex yes)
@@ -187,27 +192,20 @@ below" crlf crlf
 (ifYesNochoicex2 no)
 (ifYesNochoicex3 no)))
 =>
-(printout t crlf crlf crlf "Your an Allergic reaction" crlf crlf)
+(printout t crlf crlf crlf "You have an Allergic reaction" crlf crlf))
 
 (defrule Eye_r3
 (ifYesNochoicex3 yes)
 ?retractChy <- (ifYesNochoicex3 yes)
 =>
 (retract ?retractChy)
-(printout t crlf crlf crlf "You are sufferring from Conjunctives " crlf crlf)
+(printout t crlf crlf crlf "You are suffering from Conjunctives " crlf crlf))
 
-(defrule Stomach_r0
-(iffoundChoice 3)
-?retractCh1 <- (iffoundChoice 3)
-(not (ifYesNochoices ?))
-=>
-(retract ?retractCh1)
-(printout t crlf crlf crlf "Do you have loose stool (yes | no) " crlf crlf " Your answer: " )
- (assert (ifYesNochoices (read))))
+;;; Stomach
 
 (defrule Stomach_r1
 (ifYesNochoices yes)
-?retractChy <- (iffoundChoices yes)
+?retractChy <- (ifYesNochoices yes)
 (not (ifYesNochoices1 ?))
 =>
 (retract ?retractChy)
@@ -216,7 +214,7 @@ below" crlf crlf
 
 (defrule Stomach_r2
 (ifYesNochoices1 yes)
-?retractChy <- (iffoundChoices1 yes)
+?retractChy <- (ifYesNochoices1 yes)
 (not (ifYesNochoices2 ?))
 =>
 (retract ?retractChy)
@@ -225,7 +223,7 @@ below" crlf crlf
 
 (defrule Stomach_r3
 (ifYesNochoices2 yes)
-?retractChy <- (iffoundChoices2 yes)
+?retractChy <- (ifYesNochoices2 yes)
 (not (ifYesNochoices3 ?))
 =>
 (retract ?retractChy)
@@ -235,16 +233,15 @@ below" crlf crlf
 (defrule Stomach_r4
 (ifYesNochoices3 yes)
 =>
-(printout t crlf crlf crlf "You are sufferring from Diarrhea (yes | no) " crlf crlf " Your answer: " )
+(printout t crlf crlf crlf "You are suffering from Diarrhea" crlf crlf))
 
 (defrule Stomach_r4
 (ifYesNochoices3 yes)
 =>
-(printout t crlf crlf crlf "You are sufferring from Nausea and Vomiting (yes | no) " crlf crlf " Your answer: " )
+(printout t crlf crlf crlf "You are suffering from Nausea and Vomiting " crlf crlf))
 
-(defrule Exit_r
+(defrule Exit_r0
 (iffoundChoice 4)
 =>
-(printout t crlf crlf crlf "Thank you for using the system" crlf crlf )
-(exit)
+(printout t crlf crlf crlf "Thank for using the program! " crlf)
 )

@@ -1,0 +1,343 @@
+([initial-object] of INITIAL-OBJECT)
+
+([certainfoodslikenuts] of CAUSE
+   (description "Certain foods like nuts"))
+
+([pollen] of CAUSE
+   (description "Pollen"))
+
+([mold] of CAUSE
+   (description "Mold"))
+
+([petdander] of CAUSE
+   (description "Pet dander"))
+
+([insectstings] of CAUSE
+   (description "Insect stings"))
+
+([eyeirritation] of SYMPTOM
+   (description "Eye irritation"))
+
+([wateryeyes] of SYMPTOM
+   (description "Watery eyes"))
+
+([inflameditchynoseandthroat] of SYMPTOM
+   (description "Inflamed itchy nose and throat"))
+
+([hivesorrashes] of SYMPTOM
+   (description "Hives or rashes"))
+
+([gastrointestinaldistress] of SYMPTOM
+   (description "Gastrointestinal distress"))
+
+([itchiness] of SYMPTOM
+   (description "Itchiness"))
+
+([difficultybreathing] of SYMPTOM
+   (description "Difficulty breathing"))
+
+([antihistamines] of TREATMENT
+   (description "Antihistamines"))
+
+([allergyshots] of TREATMENT
+   (description "Allergy shots"))
+
+([antiinflammatoryagents] of TREATMENT
+   (description "Anti inflammatory agents"))
+
+([avoidallergens] of PREVENTION
+   (description "Avoid allergens"))
+
+([allergies] of DISEASE
+   (disease_name "Allergies")
+   (causes [insectstings] [petdander] [mold] [pollen] [certainfoodslikenuts])
+   (symptoms [difficultybreathing] [itchiness] [gastrointestinaldistress] [hivesorrashes] [inflameditchynoseandthroat] [sneezing] [wateryeyes] [stuffynose] [runnynose] [eyeirritation])
+   (treatments [antiinflammatoryagents] [allergyshots] [decongestants] [antihistamines])
+   (preventions [avoidallergens]))
+
+([upperrespiratoryinfections] of CAUSE
+   (description "Upper respiratory infections"))
+
+([headache] of SYMPTOM
+   (description "Headache"))
+
+([drycough] of SYMPTOM
+   (description "Dry cough"))
+
+([runnynose] of SYMPTOM
+   (description "Runny nose"))
+
+([sneezing] of SYMPTOM
+   (description "Sneezing"))
+
+([sorethroat] of SYMPTOM
+   (description "Sore throat"))
+
+([stuffynose] of SYMPTOM
+   (description "Stuffy nose"))
+
+([cough] of SYMPTOM
+   (description "Cough"))
+
+([decongestants] of TREATMENT
+   (description "Decongestants"))
+
+([saltwaternasalsprays] of TREATMENT
+   (description "Salt water nasal sprays"))
+
+([coughsyrups] of TREATMENT
+   (description "Cough syrups"))
+
+([aspirin] of TREATMENT
+   (description "Aspirin"))
+
+([flushot] of PREVENTION
+   (description "Flu shot"))
+
+([washhandsoften] of PREVENTION
+   (description "Wash hands often"))
+
+([goodsleephabits] of PREVENTION
+   (description "Good sleep habits"))
+
+([coldandflu] of DISEASE
+   (disease_name "Cold and Flu")
+   (causes [upperrespiratoryinfections])
+   (symptoms [cough] [stuffynose] [sorethroat] [sneezing] [runnynose] [drycough] [fatigue] [headache] [fever])
+   (treatments [aspirin] [coughsyrups] [saltwaternasalsprays] [decongestants])
+   (preventions [goodsleephabits] [washhandsoften] [flushot]))
+
+([bacterialorviralinfection] of CAUSE
+   (description "Bacterial or viral infection"))
+
+([allergicreaction] of CAUSE
+   (description "Allergic reaction"))
+
+([chemicalirritants] of CAUSE
+   (description "Chemical irritants"))
+
+([eyeredness] of SYMPTOM
+   (description "Eye redness"))
+
+([itching] of SYMPTOM
+   (description "Itching"))
+
+([puslikedischarge] of SYMPTOM
+   (description "Pus like discharge"))
+
+([tearing] of SYMPTOM
+   (description "Tearing"))
+
+([burningsensation] of SYMPTOM
+   (description "Burning sensation"))
+
+([washhandsfrequently] of TREATMENT
+   (description "Wash hands frequently"))
+
+([donotrubyoureyes] of TREATMENT
+   (description "Do not rub your eyes"))
+
+([avoidcontactlenses] of TREATMENT
+   (description "Avoid contact lenses"))
+
+([washyourhandsfrequently] of PREVENTION
+   (description "Wash your hands frequently"))
+
+([avoidtouchingyoureyes] of PREVENTION
+   (description "Avoid touching your eyes"))
+
+([washanythingthatmaybecontaminated] of PREVENTION
+   (description "Wash anything that may be contaminated"))
+
+([conjunctivitis] of DISEASE
+   (disease_name "Conjunctivitis")
+   (causes [chemicalirritants] [allergicreaction] [bacterialorviralinfection])
+   (symptoms [burningsensation] [tearing] [puslikedischarge] [itching] [eyeredness])
+   (treatments [avoidcontactlenses] [donotrubyoureyes] [washhandsfrequently])
+   (preventions [washanythingthatmaybecontaminated] [avoidtouchingyoureyes] [washyourhandsfrequently]))
+
+([contaminatedfoodorwater] of CAUSE
+   (description "Contaminated food or water"))
+
+([parasites] of CAUSE
+   (description "Parasites"))
+
+([foodintolerance] of CAUSE
+   (description "Food intolerance"))
+
+([panicattack] of CAUSE
+   (description "Panic attack"))
+
+([waterystools] of SYMPTOM
+   (description "Watery stools"))
+
+([frequentbowelmovements] of SYMPTOM
+   (description "Frequent bowel movements"))
+
+([nausea] of SYMPTOM
+   (description "Nausea"))
+
+([bloating] of SYMPTOM
+   (description "Bloating"))
+
+([otclactobacillusacidophiluscapsules] of TREATMENT
+   (description "OTC lactobacillus acidophilus capsules"))
+
+([diarrhea] of DISEASE
+   (disease_name "Diarrhea")
+   (causes [panicattack] [foodintolerance] [parasites] [viralinfection] [contaminatedfoodorwater])
+   (symptoms [bloating] [nausea] [frequentbowelmovements] [waterystools])
+   (treatments [otclactobacillusacidophiluscapsules])
+   (preventions [sanitation]))
+
+([emotionalandphysicalstress] of CAUSE
+   (description "Emotional and physical stress"))
+
+([irregularsleephabits] of CAUSE
+   (description "Irregular sleep habits"))
+
+([drugwithdrawal] of CAUSE
+   (description "Drug withdrawal"))
+
+([alcohol] of CAUSE
+   (description "Alcohol"))
+
+([hormonalfactors] of CAUSE
+   (description "Hormonal factors"))
+
+([paininthehead] of SYMPTOM
+   (description "Pain in the head"))
+
+([feelingofpressure] of SYMPTOM
+   (description "Feeling of pressure"))
+
+([icepackonforehead] of TREATMENT
+   (description "Ice pack on forehead"))
+
+([sleepandrest] of TREATMENT
+   (description "Sleep and rest"))
+
+([otcparacetamol] of TREATMENT
+   (description "OTC paracetamol"))
+
+([exerciseregularly] of PREVENTION
+   (description "Exercise regularly"))
+
+([getenoughsleep] of PREVENTION
+   (description "Get enough sleep"))
+
+([maintainregulareatingandsleepingschedule] of PREVENTION
+   (description "Maintain regular eating and sleeping schedule"))
+
+([headaches] of DISEASE
+   (disease_name "Headaches")
+   (causes [hormonalfactors] [alcohol] [drugwithdrawal] [irregularsleephabits] [emotionalandphysicalstress])
+   (symptoms [feelingofpressure] [paininthehead])
+   (treatments [otcparacetamol] [sleepandrest] [icepackonforehead])
+   (preventions [maintainregulareatingandsleepingschedule] [getenoughsleep] [exerciseregularly]))
+
+([motionsickness] of CAUSE
+   (description "Motion Sickness"))
+
+([drinkingtoomuchalcohol] of CAUSE
+   (description "Drinking too much alcohol"))
+
+([viralinfection] of CAUSE
+   (description "Viral infection"))
+
+([pain] of SYMPTOM
+   (description "Pain"))
+
+([extremethirst] of SYMPTOM
+   (description "Extreme thirst"))
+
+([abdominalpain] of SYMPTOM
+   (description "Abdominal pain"))
+
+([painkillers] of TREATMENT
+   (description "Painkillers"))
+
+([avoidcausativeagents] of PREVENTION
+   (description "Avoid causative agents"))
+
+([stomachaches] of DISEASE
+   (disease_name "Stomach Aches")
+   (causes [viralinfection] [drinkingtoomuchalcohol] [motionsickness])
+   (symptoms [abdominalpain] [extremethirst] [dehydration] [pain])
+   (treatments [painkillers])
+   (preventions [avoidcausativeagents]))
+
+([poorsanitation] of CAUSE
+   (description "Poor sanitation"))
+
+([contaminatedfoodsanddrinks] of CAUSE
+   (description "Contaminated foods and drinks"))
+
+([rapidheartrate] of SYMPTOM
+   (description "Rapid heart rate"))
+
+([dehydration] of SYMPTOM
+   (description "Dehydration"))
+
+([waterydiarrhea] of SYMPTOM
+   (description "Watery diarrhea"))
+
+([vomiting] of SYMPTOM
+   (description "Vomiting"))
+
+([thirst] of SYMPTOM
+   (description "Thirst"))
+
+([hydration] of TREATMENT
+   (description "Hydration"))
+
+([antibiotics] of TREATMENT
+   (description "Antibiotics"))
+
+([sanitation] of PREVENTION
+   (description "Sanitation"))
+
+([cholera] of DISEASE
+   (disease_name "Cholera")
+   (causes [contaminatedfoodsanddrinks] [poorsanitation])
+   (symptoms [thirst] [vomiting] [waterydiarrhea] [dehydration] [rapidheartrate])
+   (treatments [antibiotics] [hydration])
+   (preventions [sanitation]))
+
+([covidvirus] of CAUSE
+   (description "COVID Virus"))
+
+([fever] of SYMPTOM
+   (description "Fever"))
+
+([coughing] of SYMPTOM
+   (description "Coughing"))
+
+([shortnessofbreath] of SYMPTOM
+   (description "Shortness of breath"))
+
+([fatigue] of SYMPTOM
+   (description "Fatigue"))
+
+([selfcareathome] of TREATMENT
+   (description "Self care at home"))
+
+([antiviraldrugremdesivir] of TREATMENT
+   (description "Antiviral drug remdesivir"))
+
+([vaccineshot] of PREVENTION
+   (description "Vaccine shot"))
+
+([facemask] of PREVENTION
+   (description "Face mask"))
+
+([socialdistancing] of PREVENTION
+   (description "Social distancing"))
+
+([coronavirus] of DISEASE
+   (disease_name "Coronavirus")
+   (causes [covidvirus])
+   (symptoms [fatigue] [shortnessofbreath] [coughing] [fever])
+   (treatments [antiviraldrugremdesivir] [selfcareathome])
+   (preventions [socialdistancing] [facemask] [vaccineshot]))
+
