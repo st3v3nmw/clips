@@ -1,3 +1,13 @@
+; GROUP MEMBERS
+; MUGABWA ALLAN SIEMA - P15/1213/2018
+; MWANGI STEPHEN KIONI - P15/1198/2018
+; WANGARI KEFFAH P. KINGORI - P15/1199/2018
+; JERIM OTIENO - P15/1231/2018
+
+; RUNTIME MODULE
+; This allows the doctor to find the diagnosis using symptoms provided by the use
+; the `instances.dat` file is used to print the disease causes, symptoms, treatments, & prevention
+
 (load "constructs.clp")
 
 (load-instances "instances.dat")

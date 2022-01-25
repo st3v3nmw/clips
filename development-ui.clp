@@ -1,3 +1,13 @@
+; GROUP MEMBERS
+; MUGABWA ALLAN SIEMA - P15/1213/2018
+; MWANGI STEPHEN KIONI - P15/1198/2018
+; WANGARI KEFFAH P. KINGORI - P15/1199/2018
+; JERIM OTIENO - P15/1231/2018
+
+; DEVELOPMENT MODULE
+; This allows the expert to add more information to the knowledge base
+; this infomation is saved in classes & written to the `instances.dat` file
+
 (load "constructs.clp")
 
 (deffunction getinstanceid (?userinput)
