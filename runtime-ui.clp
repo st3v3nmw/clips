@@ -9,7 +9,7 @@ below" crlf crlf
  " 3.) Double Vision." crlf crlf
  " 4.) Drooping Eyelid." crlf crlf
  " 5.) EXIT OF SYSTEM.." crlf crlf crlf
- " Enter no. of your choise: " )
+ " Enter no. of your choice: " )
 (assert (iffoundChoice (read)))) 
 
 (defrule Headache_r0
@@ -27,7 +27,7 @@ below" crlf crlf
 (not (ifYesNochoice1 ?))
 =>
 (retract ?retractChy)
-(printout t crlf crlf crlf "Do have a fiver? (yes | no) " crlf crlf " Your answer: " )
+(printout t crlf crlf crlf "Do have a fever? (yes | no) " crlf crlf " Your answer: " )
  (assert (ifYesNochoice1 (read))))
 
 (defrule Headache_r2
