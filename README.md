@@ -5,8 +5,10 @@ Development Environment: `Linux (Ubuntu 21.10)`
 
 #### To run the diagnosis module (runtime)
 
-Run `clips -f2 runtime-ui.clp`
+- Linux: Run `clips -f2 runtime-ui.clp`
+- Windows: Run `(batch* runtime-ui.clp)`
 
 #### To run the development module
 
-Run `clips -f2 development-ui.clp`
+- Linux: Run `clips -f2 development-ui.clp`
+- Windows: Run `(batch* development-ui.clp)`
