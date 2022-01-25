@@ -58,9 +58,6 @@
 ([upperrespiratoryinfections] of CAUSE
    (description "Upper respiratory infections"))
 
-([headache] of SYMPTOM
-   (description "Headache"))
-
 ([drycough] of SYMPTOM
    (description "Dry cough"))
 
@@ -174,9 +171,6 @@
 ([frequentbowelmovements] of SYMPTOM
    (description "Frequent bowel movements"))
 
-([nausea] of SYMPTOM
-   (description "Nausea"))
-
 ([bloating] of SYMPTOM
    (description "Bloating"))
 
@@ -251,9 +245,6 @@
 ([extremethirst] of SYMPTOM
    (description "Extreme thirst"))
 
-([abdominalpain] of SYMPTOM
-   (description "Abdominal pain"))
-
 ([painkillers] of TREATMENT
    (description "Painkillers"))
 
@@ -282,9 +273,6 @@
 ([waterydiarrhea] of SYMPTOM
    (description "Watery diarrhea"))
 
-([vomiting] of SYMPTOM
-   (description "Vomiting"))
-
 ([thirst] of SYMPTOM
    (description "Thirst"))
 
@@ -307,17 +295,11 @@
 ([covidvirus] of CAUSE
    (description "COVID Virus"))
 
-([fever] of SYMPTOM
-   (description "Fever"))
-
 ([coughing] of SYMPTOM
    (description "Coughing"))
 
 ([shortnessofbreath] of SYMPTOM
    (description "Shortness of breath"))
-
-([fatigue] of SYMPTOM
-   (description "Fatigue"))
 
 ([selfcareathome] of TREATMENT
    (description "Self care at home"))
@@ -340,4 +322,47 @@
    (symptoms [fatigue] [shortnessofbreath] [coughing] [fever])
    (treatments [antiviraldrugremdesivir] [selfcareathome])
    (preventions [socialdistancing] [facemask] [vaccineshot]))
+
+([mosquitobite] of CAUSE
+   (description "Mosquito bite"))
+
+([fever] of SYMPTOM
+   (description "Fever"))
+
+([headache] of SYMPTOM
+   (description "Headache"))
+
+([nausea] of SYMPTOM
+   (description "Nausea"))
+
+([vomiting] of SYMPTOM
+   (description "Vomiting"))
+
+([abdominalpain] of SYMPTOM
+   (description "Abdominal pain"))
+
+([jointpain] of SYMPTOM
+   (description "Joint pain"))
+
+([fatigue] of SYMPTOM
+   (description "Fatigue"))
+
+([chloroquinephosphate] of TREATMENT
+   (description "Chloroquine phosphate"))
+
+([artemisininbasedcombinationtherapies] of TREATMENT
+   (description "Artemisinin based combination therapies"))
+
+([insectrepellant] of PREVENTION
+   (description "Insect repellant"))
+
+([sleepingnet] of PREVENTION
+   (description "Sleeping net"))
+
+([malaria] of DISEASE
+   (disease_name "Malaria")
+   (causes [mosquitobite])
+   (symptoms [fatigue] [jointpain] [abdominalpain] [vomiting] [nausea] [headache] [fever])
+   (treatments [artemisininbasedcombinationtherapies] [chloroquinephosphate.])
+   (preventions [sleepingnet] [insectrepellant]))
 
