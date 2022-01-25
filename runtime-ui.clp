@@ -1,5 +1,30 @@
 (load "constructs.clp")
 
+(load-instances "instances.dat")
+
+(defmessage-handler DISEASE nested-print ()
+  (bind ?causes (dynamic-get causes))
+  (printout t crlf "CAUSES" crlf)
+  (foreach ?cause ?causes
+    (send ?cause print)
+  )
+  (printout t crlf "SYMPTOMS" crlf)
+  (bind ?symptoms (dynamic-get symptoms))
+  (foreach ?symptom ?symptoms
+    (send ?symptom print)
+  )
+  (printout t crlf "TREATMENTS" crlf)
+  (bind ?treatment (dynamic-get treatments))
+  (foreach ?treatment ?treatment
+    (send ?treatment print)
+  )
+  (printout t crlf "PREVENTION" crlf)
+  (bind ?preventions (dynamic-get preventions))
+  (foreach ?prevention ?preventions
+    (send ?prevention print)
+  )
+)
+
 (defrule Menu
  (not (iffoundChoice ?))
 =>
@@ -90,7 +115,9 @@ below" crlf crlf
 ?retractChy <- (ifYesNochoice5 yes)
 =>
 (retract ?retractChy)
-(printout t crlf crlf crlf "You are suffering from Malaria" crlf crlf))
+(printout t crlf crlf crlf "You are suffering from Malaria" crlf)
+(send [malaria] nested-print)
+)
 
 ;; Cold and flu
 (defrule Headache_r7
@@ -137,7 +164,9 @@ below" crlf crlf
 ?retractChy <- (ifYesNochoice9 yes)
 =>
 (retract ?retractChy)
-(printout t crlf crlf crlf "You are suffering from Cold and Flu" crlf crlf))
+(printout t crlf crlf crlf "You are suffering from Cold and Flu" crlf)
+(send [coldandflu] nested-print)
+)
 
 ;; Allergies
 (defrule NoHeadache_r1
@@ -163,7 +192,9 @@ below" crlf crlf
 ?retractChy <- (ifYesNochoice13 yes)
 =>
 (retract ?retractChy)
-(printout t crlf crlf crlf "You have an Allergic reaction" crlf crlf))
+(printout t crlf crlf crlf "You have an Allergic reaction" crlf)
+(send [stomachaches] nested-print)
+)
 
 ;;;;-Eye
 
@@ -192,14 +223,18 @@ below" crlf crlf
 (ifYesNochoicex2 no)
 (ifYesNochoicex3 no)))
 =>
-(printout t crlf crlf crlf "You have an Allergic reaction" crlf crlf))
+(printout t crlf crlf crlf "You have an Allergic reaction" crlf)
+(send [allergies] nested-print)
+)
 
 (defrule Eye_r3
 (ifYesNochoicex3 yes)
 ?retractChy <- (ifYesNochoicex3 yes)
 =>
 (retract ?retractChy)
-(printout t crlf crlf crlf "You are suffering from Conjunctives " crlf crlf))
+(printout t crlf crlf crlf "You are suffering from Conjunctivitis" crlf)
+(send [conjunctivitis] nested-print)
+)
 
 ;;; Stomach
 
@@ -233,15 +268,19 @@ below" crlf crlf
 (defrule Stomach_r4
 (ifYesNochoices3 yes)
 =>
-(printout t crlf crlf crlf "You are suffering from Diarrhea" crlf crlf))
+(printout t crlf crlf crlf "You are suffering from Diarrhea" crlf)
+(send [diarrhea] nested-print)
+)
 
 (defrule Stomach_r4
 (ifYesNochoices3 yes)
 =>
-(printout t crlf crlf crlf "You are suffering from Nausea and Vomiting " crlf crlf))
+(printout t crlf crlf crlf "You are suffering from Cholera" crlf)
+(send [cholera] nested-print)
+)
 
 (defrule Exit_r0
 (iffoundChoice 4)
 =>
-(printout t crlf crlf crlf "Thank for using the program! " crlf)
+(printout t crlf crlf crlf "Thank for using the program!" crlf)
 )
