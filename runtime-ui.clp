@@ -13,10 +13,9 @@
  " Choose one of the problem areas listed
 below" crlf crlf
  " 1.) Headache. " crlf crlf
- " 2.) Bulging Eye." crlf crlf
- " 3.) Double Vision." crlf crlf
- " 4.) Drooping Eyelid." crlf crlf
- " 5.) EXIT OF SYSTEM.." crlf crlf crlf
+ " 2.) Eye Issues." crlf crlf
+ " 3.) Stomach Aches." crlf crlf
+ " 4.) EXIT OF SYSTEM.." crlf crlf crlf
  " Enter no. of your choice: " )
 (assert (iffoundChoice (read)))) 
 
@@ -127,3 +126,125 @@ below" crlf crlf
 =>
 (retract ?retractChy)
 (printout t crlf crlf crlf "Your are sufferring from Cold and Flu" crlf crlf))
+
+;; Allergies
+(defrule NoHeadache_r1
+(ifYesNochoice no)
+?retractChy <- (ifYesNochoice no)
+(not (ifYesNochoice12 ?))
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Do you have runny or Stuffy nose (yes | no) " crlf crlf " Your answer: " )
+ (assert (ifYesNochoice12 (read))))
+
+(defrule NoHeadache_r2
+(ifYesNochoice12 yes)
+?retractChy <- (ifYesNochoice12 yes)
+(not (ifYesNochoice13 ?))
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Do you have sneeze (yes | no) " crlf crlf " Your answer: " )
+ (assert (ifYesNochoice13 (read))))
+
+(defrule Headache_r3
+(ifYesNochoice13 yes)
+?retractChy <- (ifYesNochoice13 yes)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Your an Allergic reaction" crlf crlf))
+
+(defrule Eye_r0
+(iffoundChoice 2)
+?retractCh1 <- (iffoundChoice 2)
+(not (ifYesNochoicex ?))
+=>
+(retract ?retractCh1)
+(printout t crlf crlf crlf "Do you have irritating or watery eyes (yes | no) " crlf crlf " Your answer: " )
+ (assert (ifYesNochoicex (read))))
+
+ (defrule Eye_r1
+(ifYesNochoicex yes)
+?retractChy <- (ifYesNochoicex yes)
+(not (ifYesNochoicex1 ?))
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Do you feel a burning sensation in the eyes (yes | no) " crlf crlf " Your answer: " )
+ (assert (ifYesNochoicex1 (read))))
+
+
+(defrule Eye_r2
+(ifYesNochoicex2 yes)
+?retractChy <- (ifYesNochoicex2 yes)
+(not (ifYesNochoicex3 ?))
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Do you have pus-like discharge from the eyes (yes | no) " crlf crlf " Your answer: " )
+ (assert (ifYesNochoicex3 (read))))
+
+(defrule Eye_rl3
+(and (ifYesNochoicex yes)
+(or (ifYesNochoicex1 no)
+(ifYesNochoicex2 no)
+(ifYesNochoicex3 no)))
+=>
+(printout t crlf crlf crlf "Your an Allergic reaction" crlf crlf)
+
+(defrule Eye_r3
+(ifYesNochoicex3 yes)
+?retractChy <- (ifYesNochoicex3 yes)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "You are sufferring from Conjunctives " crlf crlf)
+
+(defrule Stomach_r0
+(iffoundChoice 3)
+?retractCh1 <- (iffoundChoice 3)
+(not (ifYesNochoices ?))
+=>
+(retract ?retractCh1)
+(printout t crlf crlf crlf "Do you have loose stool (yes | no) " crlf crlf " Your answer: " )
+ (assert (ifYesNochoices (read))))
+
+(defrule Stomach_r1
+(ifYesNochoices yes)
+?retractChy <- (iffoundChoices yes)
+(not (ifYesNochoices1 ?))
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Do you have frequent bowel movements (yes | no) " crlf crlf " Your answer: " )
+ (assert (ifYesNochoices1 (read))))
+
+(defrule Stomach_r2
+(ifYesNochoices1 yes)
+?retractChy <- (iffoundChoices1 yes)
+(not (ifYesNochoices2 ?))
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Do you have pain in the abdomen or nausea or bloating (yes | no) " crlf crlf " Your answer: " )
+(assert (ifYesNochoices2 (read))))
+
+(defrule Stomach_r3
+(ifYesNochoices2 yes)
+?retractChy <- (iffoundChoices2 yes)
+(not (ifYesNochoices3 ?))
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Do you have fever or bloody stool (yes | no) " crlf crlf " Your answer: " )
+(assert (ifYesNochoices3 (read))))
+
+(defrule Stomach_r4
+(ifYesNochoices3 yes)
+=>
+(printout t crlf crlf crlf "You are sufferring from Diarrhea (yes | no) " crlf crlf " Your answer: " )
+
+(defrule Stomach_r4
+(ifYesNochoices3 yes)
+=>
+(printout t crlf crlf crlf "You are sufferring from Nausea and Vomiting (yes | no) " crlf crlf " Your answer: " )
+
+(defrule Exit_r
+(iffoundChoice 4)
+=>
+(printout t crlf crlf crlf "Thank you for using the system" crlf crlf )
+(exit)
+)
